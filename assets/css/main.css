@@ -1847,7 +1847,7 @@ p {
 .overlay-close {
   position: absolute;
   top: -32px;
-  left: -32px;
+  right: -32px;
   font-size: 36px;
   color: white;
   cursor: pointer;
