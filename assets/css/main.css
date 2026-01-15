@@ -15,8 +15,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #60698D;
+  color: #767676;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 * {
@@ -80,7 +81,7 @@ h6 {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 950;
   margin: 0px;
-  color: #1D2A5D;
+  color: #004D6A;
 }
 
 h1 a,
@@ -181,7 +182,7 @@ p {
   z-index: 5;
   transition: all .4s ease-in-out;
   border: none;
-  background: #2D6A6E;
+  background: #004D6A;
   overflow: hidden;
 }
 
@@ -216,7 +217,7 @@ p {
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #2D6A6E;
+  background: #004D6A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +323,7 @@ p {
   height: 100%;
   border-style: solid;
   /* Spinner Color */
-  border-color: #2D6A6E #2D6A6E #ddd;
+  border-color: #004D6A #2D6A6E #ddd;
   border-radius: 50%;
   border-width: 6px;
 }
@@ -422,25 +423,25 @@ p {
 }
 
 .sticky .navbar {
-  padding: 17px 0;
+  padding: 10px 0;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .sticky .navbar {
-    padding: 15px 0;
+    padding: 8px 0;
   }
 }
 
 .sticky .navbar .navbar-nav .nav-item a {
-  color: #2D6A6E;
+  color: #004D6A;
 }
 
 .sticky .navbar .navbar-nav .nav-item a::before {
-  background: #2D6A6E;
+  background: #004D6A;
 }
 
 .sticky .navbar .navbar-toggler .toggler-icon {
-  background: #2D6A6E;
+  background: #004D6A;
 }
 
 .navbar {
@@ -463,6 +464,20 @@ p {
 
 .navbar-brand img {
   max-width: 180px;
+}
+
+#logo {
+  color: #fff;
+  transition: all 0.3s ease-out 0s;
+  cursor: pointer;
+}
+
+#logo:hover {
+  font-size: 1.5em;
+}
+
+.sticky #logo {
+  color: #004D6A;
 }
 
 .navbar-toggler {
@@ -525,17 +540,21 @@ p {
 .navbar-nav .nav-item a {
   font-size: 18px;
   font-weight: 400;
-  color: #fff;
+  color: #004D6A;
   transition: all 0.3s ease-out 0s;
   padding: 10px 0;
   position: relative;
+}
+
+.navbar-nav .nav-item a:hover {
+  font-size: 1.2em;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-nav .nav-item a {
     display: inline-block;
     padding: 6px 10px;
-    color: #2D6A6E;
+    color: #004D6A;
   }
 }
 
@@ -627,7 +646,7 @@ p {
 
 .navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
   padding-left: 25px;
-  color: #2D6A6E;
+  color: #004D6A;
 }
 
 .navbar-nav .sub-nav-toggler {
@@ -681,7 +700,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom left;
-  padding: 150px 0;
+  padding: 100px 0px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -697,32 +716,32 @@ p {
 }
 
 .hero-section .hero-content h1 {
-  font-size: 60px;
-  margin-bottom: 35px;
+  font-size: 42px;
+  margin-bottom: 25px;
   color: #fff;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .hero-section .hero-content h1 {
-    font-size: 55px;
+    font-size: 40px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero-section .hero-content h1 {
-    font-size: 48px;
+    font-size: 38px;
   }
 }
 
 @media (max-width: 767px) {
   .hero-section .hero-content h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .hero-section .hero-content h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
 }
 
@@ -733,7 +752,7 @@ p {
 
 .hero-section .hero-content .main-btn {
   background: #fff;
-  color: #2D6A6E;
+  color: #004D6A;
   font-size: 20px;
   font-weight: 950;
   padding: 18px 52px;
@@ -780,7 +799,7 @@ p {
   width: 75px;
   height: 75px;
   border-radius: 5px;
-  background: #2D6A6E;
+  background: #004D6A;
   color: #fff;
   position: relative;
   display: flex;
@@ -876,7 +895,7 @@ p {
   padding: 18px 25px;
   padding-right: 45px;
   position: relative;
-  color: #1D2A5D;
+  color: #004D6A;
 }
 
 .faq-section .single-faq button.collapsed {
@@ -892,7 +911,7 @@ p {
   position: absolute;
   top: 27px;
   right: 25px;
-  border-top: 9px solid #60698D;
+  border-top: 9px solid #767676;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   transition: all 0.3s ease-out 0s;
@@ -977,17 +996,17 @@ p {
 
 .footer .widget-wrapper .footer-widget .download li a .icon {
   font-size: 30px;
-  color: #1D2A5D;
+  color: #004D6A;
   margin-right: 10px;
 }
 
 .footer .widget-wrapper .footer-widget .download li a .text {
   font-size: 10px;
-  color: #60698D;
+  color: #767676;
 }
 
 .footer .widget-wrapper .footer-widget .download li a .text b {
-  color: #1D2A5D;
+  color: #004D6A;
   font-size: 16px;
   font-weight: 950;
   display: block;
@@ -1761,4 +1780,98 @@ p {
 
 .pb-225 {
   padding-bottom: 225px;
+}
+/* Frame Item Styling */
+.frame-item {
+  overflow: visible;
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+.frame-item img {
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.frame-item img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Image Overlay */
+.image-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px 20px 20px;
+  overflow-y: auto;
+}
+
+.image-overlay.active {
+  display: flex;
+}
+
+.overlay-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-image {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.overlay-close {
+  position: absolute;
+  top: -32px;
+  left: -32px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: color 0.3s ease;
+  z-index: 1001;
+}
+
+.overlay-close:hover {
+  color: #ccc;
+}
+
+.col-lg-3 {
+  max-width: 240px;
+}
+
+.frame-caption {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: rgb(156, 156, 156);
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+  /* padding: 5px 0; */
 }

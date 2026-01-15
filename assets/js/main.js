@@ -11,31 +11,48 @@
 		document.querySelector('.preloader').style.display = 'none';
 	}
 
+	// Logo click handler
+	document.addEventListener('DOMContentLoaded', function() {
+		var logo = document.querySelector('#logo');
+		if (logo) {
+			logo.addEventListener('click', function() {
+				window.location.href = 'index.html';
+			});
+		}
+	});
 
     /*=====================================
     Sticky
     ======================================= */
     window.onscroll = function () {
         var header_navbar = document.querySelector(".navbar-area");
+        if (!header_navbar) return;
+        
         var sticky = header_navbar.offsetTop;
         var logo = document.querySelector('.navbar-brand img');
 
         if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.src = 'assets/img/logo/logo-2-green.svg';
+            if (logo) {
+                logo.src = 'assets/img/logo/logo-2-green.svg';
+            }
         } else {
             header_navbar.classList.remove("sticky");
-            logo.src = 'assets/img/logo/logo-2-white.svg';
+            if (logo) {
+                logo.src = 'assets/img/logo/logo-2-white.svg';
+            }
         }
 
 
 
         // show or hide the back-top-top button
         var backToTo = document.querySelector(".scroll-top");
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            backToTo.style.display = "flex";
-        } else {
-            backToTo.style.display = "none";
+        if (backToTo) {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTo.style.display = "flex";
+            } else {
+                backToTo.style.display = "none";
+            }
         }
     };
 
@@ -61,6 +78,7 @@
 			var currLink = sections[i];
 			var val = currLink.getAttribute('href');
 			var refElement = document.querySelector(val);
+			if (!refElement) continue;
 			var scrollTopMinus = scrollPos + 73;
 			if (refElement.offsetTop <= scrollTopMinus && (refElement.offsetTop + refElement.offsetHeight > scrollTopMinus)) {
 				document.querySelector('.page-scroll').classList.remove('active');
@@ -80,13 +98,15 @@
 
     document.querySelectorAll(".page-scroll").forEach(e =>
         e.addEventListener("click", () => {
-            navbarToggler.classList.remove("active");
-            navbarCollapse.classList.remove('show')
+            if (navbarToggler) navbarToggler.classList.remove("active");
+            if (navbarCollapse) navbarCollapse.classList.remove('show');
         })
     );
-    navbarToggler.addEventListener('click', function() {
-        navbarToggler.classList.toggle("active");
-    }) 
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            navbarToggler.classList.toggle("active");
+        });
+    } 
 
 
 	// WOW active
@@ -131,3 +151,48 @@
 
 
 })();
+
+// Image overlay functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const imageOverlay = document.getElementById('imageOverlay');
+    const overlayImage = document.getElementById('overlayImage');
+    const overlayClose = document.querySelector('.overlay-close');
+    const frameImages = document.querySelectorAll('.frame-item img');
+
+    console.log('Image overlay init - overlay:', !!imageOverlay, 'image:', !!overlayImage, 'close:', !!overlayClose);
+
+    // Only proceed if overlay elements exist
+    if (!imageOverlay || !overlayImage) {
+        console.warn('Core overlay elements not found');
+        return;
+    }
+
+    console.log('Found', frameImages.length, 'frame images');
+
+    // Open overlay on image click
+    frameImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+            console.log('Image clicked');
+            e.stopPropagation();
+            overlayImage.src = this.src;
+            imageOverlay.classList.add('active');
+        });
+    });
+
+    // Close overlay on X click - only if element exists
+    if (overlayClose) {
+        overlayClose.addEventListener('click', function() {
+            imageOverlay.classList.remove('active');
+        });
+    }
+
+    // Close overlay on background click
+    imageOverlay.addEventListener('click', function() {
+        imageOverlay.classList.remove('active');
+    });
+
+    // Prevent closing when clicking on the image itself
+    overlayImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});

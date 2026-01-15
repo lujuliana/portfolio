@@ -45,18 +45,18 @@
 						<div class="col-lg-12">
 							<!-- navbar -->
 							<nav class="navbar navbar-expand-lg">
-								<h1 class="navbar-brand section-title" href="index.html" style="color: #fff;" >
+								<h1 class="navbar-brand section-title nav-item" href="index.html" id="logo">
 									<!-- <img src="assets/img/favicon.svg" alt="Logo" /> -->
 									JULIANA LU
 								</h1>
-								<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="toggler-icon"></span>
 									<span class="toggler-icon"></span>
 									<span class="toggler-icon"></span>
-								</button>
-									<ul id="nav" class="navbar-nav ms-auto">
-										<li class="nav-item"> <a class="page-scroll active" href="index.html">BloomRoom</a> </li>
-									</ul>
+								</button> -->
+								<ul id="nav" class="navbar-nav ms-auto">
+									<li class="nav-item"> <a class="page-scroll active" href="index.html">BloomRoom</a> </li>
+								</ul>
 								</div>
 							</nav>
 						</div>
@@ -81,16 +81,145 @@
 		<!-- ========================= hero-section end ========================= -->
 
 		<!-- ==================== body start ===================== -->
-		 <section id="feature" class="feature-section pt-50">
+		<section id="body" class="body-section pt-15">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg">
 						<div class="section-title text-center">
-							<h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">This website is under construction.</h3>
-							<p class="mb-5 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp; text-align: center;">
+							<h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">⚠️ This website is under construction.</h2>
+							<!-- <p class="mb-5 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp; text-align: center;">
 								Please check back soon!
-                            </p>
-							
+							</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="feature-item text-center mb-30 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+							<p style="margin-bottom: 5px;">BloomRoom is a chore tracking app for multi-person households.</p>
+							<p>Check back soon for the complete writeup.</p>
+						</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========================= frames grid ========================= -->
+		<section id="frames" class="frames-section pt-25 pb-25">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="section-title text-center">
+							<h3 class="mb-25 wow fadeInUp" data-wow-delay=".2s">App Screenshots</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- main tabs -->
+				<div class="row g-4 justify-content-center mb-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Home</p>
+							<img src="assets/img/frames/dashboard.svg" alt="Dashboard" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Chores (List)</p>
+							<img src="assets/img/frames/chores-list.svg" alt="Chores List" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Chores (Calendar)</p>
+							<img src="assets/img/frames/chores-calendar.svg" alt="Chores Calendar" class="img-fluid">
+						</div>
+					</div>
+				</div>
+
+				<!-- Auth flow -->
+				<div class="row g-4 justify-content-center mb-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Log In</p>
+							<img src="assets/img/frames/auth-Login.svg" alt="Login" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Sign Up</p>
+							<img src="assets/img/frames/auth-signup.svg" alt="Signup" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Join/Create Household</p>
+							<img src="assets/img/frames/auth-household.svg" alt="Household" class="img-fluid">
+						</div>
+					</div>
+				</div>
+
+				<!-- Chore details -->
+				<div class="row g-4 justify-content-center mb-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Chore Details</p>
+							<img src="assets/img/frames/chore-details.svg" alt="Chore Details" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Edit Chore</p>
+							<img src="assets/img/frames/chore-edit.svg" alt="Edit Chore" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Add Chore</p>
+							<img src="assets/img/frames/chore-add.svg" alt="Add Chore" class="img-fluid">
+						</div>
+					</div>
+				</div>
+
+				<!-- Garden -->
+				<div class="row g-4 justify-content-center mb-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Garden (Household)</p>
+							<img src="assets/img/frames/garden.svg" alt="Garden" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Garden (Member)</p>
+							<img src="assets/img/frames/garden-ava.svg" alt="Garden Avatar" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Settings</p>
+							<img src="assets/img/frames/settings.svg" alt="Settings" class="img-fluid">
+						</div>
+					</div>
+				</div>
+
+				<!-- Settings -->
+				<div class="row g-4 justify-content-center mb-4">
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Account Settings</p>
+							<img src="assets/img/frames/settings-account.svg" alt="Account Settings" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Household Settings</p>
+							<img src="assets/img/frames/settings-household.svg" alt="Household Settings" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="frame-item">
+							<p class="frame-caption">Members Settings</p>
+							<img src="assets/img/frames/manage members.svg" alt="Manage Members" class="img-fluid">
 						</div>
 					</div>
 				</div>
@@ -99,8 +228,17 @@
 
 		<!-- ========================= scroll-top ========================= -->
 		<a href="#" class="scroll-top btn-hover">
-			<i class="lni lni-chevron-up"></i>
+			<!-- <i class="lni lni-chevron-up"></i> -->
+			<span>⇧</span>
 		</a>
+
+		<!-- ========================= Image Overlay ========================= -->
+		<div id="imageOverlay" class="image-overlay">
+			<div class="overlay-content">
+				<span class="overlay-close">&times;</span>
+				<img id="overlayImage" class="overlay-image" src="" alt="">
+			</div>
+		</div>
 
 		<!-- ========================= JS here ========================= -->
 		<script src="assets/js/bootstrap-5.0.0-beta2.min.js"></script>
