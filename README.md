@@ -1,2 +1,2 @@
-# bloom-website
+# portfolio
 https://lujuliana.github.io/portfolio/

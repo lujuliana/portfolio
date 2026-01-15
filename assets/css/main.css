@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #60698D;
@@ -111,7 +111,7 @@ h1 {
 .section-title span {
   font-size: 25px;
   font-weight: 600;
-  color: #2D6A6E;
+  color: #004D6A;
   margin-bottom: 20px;
 }
 
