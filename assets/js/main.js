@@ -19,6 +19,12 @@
 				window.location.href = 'index.html';
 			});
 		}
+		
+		// Initialize scroll-top button as hidden
+		var backToTop = document.querySelector(".scroll-top");
+		if (backToTop) {
+			backToTop.style.display = "none";
+		}
 	});
 
     /*=====================================
@@ -92,57 +98,36 @@
 	window.document.addEventListener('scroll', onScroll);
 
 
-    //===== close navbar-collapse when a  clicked
-    let navbarToggler = document.querySelector(".navbar-toggler");    
-    var navbarCollapse = document.querySelector(".navbar-collapse");
-
-    document.querySelectorAll(".page-scroll").forEach(e =>
-        e.addEventListener("click", () => {
-            if (navbarToggler) navbarToggler.classList.remove("active");
-            if (navbarCollapse) navbarCollapse.classList.remove('show');
-        })
-    );
-    if (navbarToggler) {
-        navbarToggler.addEventListener('click', function() {
-            navbarToggler.classList.toggle("active");
-        });
-    } 
-
-
 	// WOW active
     new WOW().init();
 
 
     // ====== scroll top js
-    function scrollTo(element, to = 0, duration= 1000) {
+    function scrollTo(element, to = 0, duration= 600) {
 
         const start = element.scrollTop;
         const change = to - start;
-        const increment = 20;
         let currentTime = 0;
+        const startTime = Date.now();
 
-        const animateScroll = (() => {
+        const animateScroll = () => {
+            const elapsed = Date.now() - startTime;
+            currentTime = Math.min(elapsed, duration);
 
-            currentTime += increment;
-
-            const val = Math.easeInOutQuad(currentTime, start, change, duration);
+            const val = Math.easeLinear(currentTime, start, change, duration);
 
             element.scrollTop = val;
 
             if (currentTime < duration) {
-                setTimeout(animateScroll, increment);
+                requestAnimationFrame(animateScroll);
             }
-        });
+        };
 
-        animateScroll();
+        requestAnimationFrame(animateScroll);
     };
 
-    Math.easeInOutQuad = function (t, b, c, d) {
-
-        t /= d/2;
-        if (t < 1) return c/2*t*t + b;
-        t--;
-        return -c/2 * (t*(t-2) - 1) + b;
+    Math.easeLinear = function (t, b, c, d) {
+        return c * (t / d) + b;
     };
 
     document.querySelector('.scroll-top').onclick = function () {
